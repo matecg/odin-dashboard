@@ -1,0 +1,46 @@
+:root {
+    --accent-clr: gold;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+a:hover {
+    color: var(--accent-clr);
+}
+
+.main {
+    display: grid;
+    grid-template: 1fr 7fr / 1fr 7fr;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: cornflowerblue;
+    grid-row: span 2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+}
+
+.control {
+    background-color: #fff;
+}
+
+.cards {
+    background-color: #DDD;
+}
