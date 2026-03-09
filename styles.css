@@ -1,14 +1,20 @@
 :root {
     --accent-clr: gold;
     --bg-clr: cornflowerblue;
+    --shadow-clr: #AFAFAF;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #EEE;
 }
 
 h1 {
     font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
 }
 
 ul {
@@ -44,19 +50,46 @@ a:hover {
 
 .control {
     background-color: #fff;
-    box-shadow: 0px 5px 5px 0px #4e4e4e;
+    box-shadow: 0px 2px 5px 0px var(--shadow-clr);
+    z-index: 1;
     overflow: visible;
     padding: 25px;
 }
 
-.cards {
+.control-first {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.control-first img + p {
+    font-weight: 600;
+}
+
+.control-first > div {
+    display: flex;
+    margin-left: 100px;
+    gap: 25px;
+}
+
+.control-first > input {
+    border: none;
     background-color: #EEE;
+    border-radius: 20px;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.control-first > button {
+    border: none;
+    background-color: white;
+    width: fit-content;
+    cursor: pointer;
 }
 
 .control-second {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .greeting {
@@ -105,10 +138,15 @@ a:hover {
     background-color: var(--bg-clr);
     border: none;
     border-radius: 20px;
-    min-width: 110px;
-    padding: 6px 30px;
+    min-width: 100px;
+    padding: 6px 20px;
     color: white;
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+.actions > button:hover {
+    box-shadow: 0px 2px 5px 0px var(--shadow-clr);
+    border: 2px solid var(--accent-clr);
 }
