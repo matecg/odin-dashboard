@@ -12,6 +12,7 @@ body {
 svg {
     fill: black;
     height: 20px;
+    cursor: pointer;
 }
 
 h1 {
@@ -20,6 +21,11 @@ h1 {
 
 h2 {
     font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 ul {
@@ -79,7 +85,7 @@ a:hover {
     gap: 20px;
 }
 
-.sidebar a:hover > svg {
+.sidebar a:hover>svg {
     fill: var(--accent-clr);
 }
 
@@ -97,13 +103,14 @@ a:hover {
     gap: 20px;
 }
 
-.control-first div + p {
+.control-first div+p {
     font-weight: 600;
 }
 
-.control-first > div {
+.control-first>div {
     display: flex;
     margin-left: 100px;
+    align-items: center;
     gap: 25px;
 }
 
@@ -112,7 +119,22 @@ a:hover {
     background-size: contain;
 }
 
-.control-first > input {
+.fox {
+    background-image: url("./assets/imgs/fox.JPG");
+    background-size: contain;
+}
+
+.penguin {
+    background-image: url("./assets/imgs/penguin.JPG");
+    background-size: contain;
+}
+
+.sloth {
+    background-image: url("./assets/imgs/sloth.JPG");
+    background-size: contain;
+}
+
+.control-first>input {
     border: none;
     background-color: #EEE;
     border-radius: 20px;
@@ -120,16 +142,16 @@ a:hover {
     padding: 0 10px;
 }
 
-.control-first > input:hover {
+.control-first>input:hover {
     box-shadow: 0px 2px 5px 0px var(--shadow-clr);
 }
 
-.control-first > input:focus {
+.control-first>input:focus {
     outline: 0;
     border: 3px solid var(--accent-clr);
 }
 
-.control-first > button {
+.control-first>button {
     border: none;
     background-color: white;
     width: fit-content;
@@ -148,16 +170,16 @@ a:hover {
     align-items: end;
 }
 
-.greeting > div {
+.greeting>div {
     grid-row: span 2;
     justify-self: center;
 }
 
-.greeting > p {
+.greeting>p {
     font-weight: 600;
 }
 
-.greeting > p:first-of-type {
+.greeting>p:first-of-type {
     font-size: 0.75rem;
     height: 20px;
 }
@@ -168,8 +190,8 @@ a:hover {
 }
 
 .avatar-small {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .avatar-medium {
@@ -183,7 +205,7 @@ a:hover {
     align-items: center;
 }
 
-.actions > button {
+.actions>button {
     background-color: var(--bg-clr);
     border: none;
     border-radius: 20px;
@@ -195,7 +217,94 @@ a:hover {
     cursor: pointer;
 }
 
-.actions > button:hover {
+.actions>button:hover {
     box-shadow: 0px 2px 5px 0px var(--shadow-clr);
     border: 2px solid var(--accent-clr);
+}
+
+.content {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 2.5fr 1fr;
+    padding: 20px;
+    gap: 30px 15px;
+}
+
+.projects {
+    grid-row: span 2;
+}
+
+.trend-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.trend-card a {
+    color: black;
+}
+
+.trend-card a:hover {
+    color: var(--accent-clr);
+}
+
+.trend-card-container,
+.news-container,
+.project-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px 0px var(--shadow-clr);
+}
+
+.project-cards-container {
+    display: grid;
+    grid-template: repeat(3, 200px) / repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+
+}
+
+.project-card {
+    border-left: 8px solid var(--accent-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trend-card p+p,
+.project-card p,
+.news-card p + p {
+    font-size: 0.85rem;
+    color: #888;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-card p:first-of-type {
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.trend-card,
+.news-card p + p {
+    margin-bottom: 15px;
+}
+
+.news-card:not(.news-card:last-of-type) {
+    border-bottom: 1px solid var(--shadow-clr);
 }
