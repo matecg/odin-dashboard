@@ -48,6 +48,37 @@ a:hover {
     padding: 20px;
 }
 
+.sidebar svg {
+    fill: #fff;
+    display: inline-block;
+    height: 20px;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+}
+
+.title svg {
+    height: 40px;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.sidebar a {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar a:hover > svg {
+    fill: var(--accent-clr);
+}
+
 .control {
     background-color: #fff;
     box-shadow: 0px 2px 5px 0px var(--shadow-clr);
